@@ -1,0 +1,251 @@
+<mat-card class="thread-topic-card unreaad-card" id="card1">
+  <div class="thread-card">
+    <div class="profile-picture">
+      <img src="./../../../assets/icons/8. User Name.png" />
+    </div>
+    <div class="thread-details">
+      <div class="thread-title">
+        <span>Thread Title</span>
+        <span class="time_notif">Time</span>
+        <button class="togglebtn1">
+          <i class="fas fa-ellipsis-v" (click)="toggleDisplay('ul1')"></i>
+        </button>
+        <!--(click)="toggleDisplay()-->
+      </div>
+      <div class="options">
+        <ul [hidden]="isShow" class="options-ul" id="ul1">
+          <li>
+            <div id="Bookmark_status" (click)="Bookmark('Bookmark_status')">
+              Bookmark this Post
+            </div>
+          </li>
+          <li id="Notify_status" (click)="Notify('Notify_status')">
+            Turn Off Notification
+          </li>
+          <!-- routerLink="/blogs"-->
+          <li id="Follow_status" (click)="Follow('Follow_status')">
+            Unfollow User
+          </li>
+          <li (click)="Remove('card1')">Remove Notification</li>
+        </ul>
+      </div>
+
+      <div class="thread-desc">
+        <p class="notify_text">
+          User commented on your post. User commented on your post. User
+          commented on your post. User commented more
+        </p>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<mat-card class="thread-topic-card unreaad-card" id="card2">
+  <div class="thread-card">
+    <div class="profile-picture">
+      <img src="./../../../assets/icons/8. User Name.png" />
+    </div>
+    <div class="thread-details">
+      <div class="thread-title">
+        <span>Thread Title</span>
+        <span class="time_notif">Time</span>
+        <button class="togglebtn1">
+          <i class="fas fa-ellipsis-v" (click)="toggleDisplay('ul2')"></i>
+        </button>
+        <!--(click)="toggleDisplay()-->
+      </div>
+      <div class="options">
+        <ul [hidden]="isShow" class="options-ul" id="ul2">
+          <li>
+            <div id="Bookmark_status2" (click)="Bookmark('Bookmark_status2')">
+              Bookmark this Post
+            </div>
+          </li>
+          <li id="Notify_status2" (click)="Notify('Notify_status2')">
+            Turn Off Notification
+          </li>
+          <!-- routerLink="/blogs"-->
+          <li id="Follow_status2" (click)="Follow('Follow_status2')">
+            Unfollow User
+          </li>
+          <li (click)="Remove('card2')">Remove Notification</li>
+        </ul>
+      </div>
+
+      <div class="thread-desc">
+        <p class="notify_text">
+          User commented on your post. User commented on your post. User
+          commented on your post. User commented more
+        </p>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<mat-card class="thread-topic-card" id="card3">
+  <div class="thread-card">
+    <div class="profile-picture">
+      <img src="./../../../assets/icons/8. User Name.png" />
+    </div>
+    <div class="thread-details">
+      <div class="thread-title">
+        <span>Thread Title</span>
+        <span class="time_notif">Time</span>
+        <button class="togglebtn1">
+          <i class="fas fa-ellipsis-v" (click)="toggleDisplay('ul3')"></i>
+        </button>
+        <!--(click)="toggleDisplay()-->
+      </div>
+      <div class="options">
+        <ul [hidden]="isShow" class="options-ul" id="ul3">
+          <li>
+            <div id="Bookmark_status3" (click)="Bookmark('Bookmark_status3')">
+              Bookmark this Post
+            </div>
+          </li>
+          <li id="Notify_status3" (click)="Notify('Notify_status3')">
+            Turn Off Notification
+          </li>
+          <!-- routerLink="/blogs"-->
+          <li id="Follow_status3" (click)="Follow('Follow_status3')">
+            Unfollow User
+          </li>
+          <li (click)="Remove('card3')">Remove Notification</li>
+        </ul>
+      </div>
+
+      <div class="thread-desc">
+        <p class="notify_text">
+          User commented on your post. User commented on your post. User
+          commented on your post. User commented more
+        </p>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<mat-card class="thread-topic-card" id="card4">
+  <div class="thread-card">
+    <div class="profile-picture">
+      <img src="./../../../assets/icons/8. User Name.png" />
+    </div>
+    <div class="thread-details">
+      <div class="thread-title">
+        <span>Thread Title</span>
+        <span class="time_notif">Time</span>
+        <button class="togglebtn1">
+          <i class="fas fa-ellipsis-v" (click)="toggleDisplay('ul4')"></i>
+        </button>
+        <!--(click)="toggleDisplay()-->
+      </div>
+      <div class="options">
+        <ul [hidden]="isShow" class="options-ul" id="ul4">
+          <li>
+            <div id="Bookmark_status4" (click)="Bookmark('Bookmark_status4')">
+              Bookmark this Post
+            </div>
+          </li>
+          <li id="Notify_status4" (click)="Notify('Notify_status4')">
+            Turn Off Notification
+          </li>
+          <!-- routerLink="/blogs"-->
+          <li id="Follow_status4" (click)="Follow('Follow_status4')">
+            Unfollow User
+          </li>
+          <li (click)="Remove('card4')">Remove Notification</li>
+        </ul>
+      </div>
+
+      <div class="thread-desc">
+        <p class="notify_text">
+          User commented on your post. User commented on your post. User
+          commented on your post. User commented more
+        </p>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<mat-card class="thread-topic-card" id="card5">
+  <div class="thread-card">
+    <div class="profile-picture">
+      <img src="./../../../assets/icons/8. User Name.png" />
+    </div>
+    <div class="thread-details">
+      <div class="thread-title">
+        <span>Thread Title</span>
+        <span class="time_notif">Time</span>
+        <button class="togglebtn1">
+          <i class="fas fa-ellipsis-v" (click)="toggleDisplay('ul5')"></i>
+        </button>
+        <!--(click)="toggleDisplay()-->
+      </div>
+      <div class="options">
+        <ul [hidden]="isShow" class="options-ul" id="ul5">
+          <li>
+            <div id="Bookmark_status5" (click)="Bookmark('Bookmark_status5')">
+              Bookmark this Post
+            </div>
+          </li>
+          <li id="Notify_status5" (click)="Notify('Notify_status5')">
+            Turn Off Notification
+          </li>
+          <!-- routerLink="/blogs"-->
+          <li id="Follow_status5" (click)="Follow('Follow_status5')">
+            Unfollow User
+          </li>
+          <li (click)="Remove('card5')">Remove Notification</li>
+        </ul>
+      </div>
+
+      <div class="thread-desc">
+        <p class="notify_text">
+          User commented on your post. User commented on your post. User
+          commented on your post. User commented more
+        </p>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<mat-card class="thread-topic-card" id="card6">
+  <div class="thread-card">
+    <div class="profile-picture">
+      <img src="./../../../assets/icons/8. User Name.png" />
+    </div>
+    <div class="thread-details">
+      <div class="thread-title">
+        <span>Thread Title</span>
+        <span class="time_notif">Time</span>
+        <button class="togglebtn1">
+          <i class="fas fa-ellipsis-v" (click)="toggleDisplay('ul6')"></i>
+        </button>
+        <!--(click)="toggleDisplay()-->
+      </div>
+      <div class="options">
+        <ul [hidden]="isShow" class="options-ul" id="ul6">
+          <li>
+            <div id="Bookmark_status6" (click)="Bookmark('Bookmark_status6')">
+              Bookmark this Post
+            </div>
+          </li>
+          <li id="Notify_status6" (click)="Notify('Notify_status6')">
+            Turn Off Notification
+          </li>
+          <!-- routerLink="/blogs"-->
+          <li id="Follow_status6" (click)="Follow('Follow_status6')">
+            Unfollow User
+          </li>
+          <li (click)="Remove('card6')">Remove Notification</li>
+        </ul>
+      </div>
+
+      <div class="thread-desc">
+        <p class="notify_text">
+          User commented on your post. User commented on your post. User
+          commented on your post. User commented more
+        </p>
+      </div>
+    </div>
+  </div>
+</mat-card>

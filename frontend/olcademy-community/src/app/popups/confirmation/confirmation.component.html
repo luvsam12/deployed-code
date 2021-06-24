@@ -1,0 +1,11 @@
+<div class="container">
+  <i class="far fa-times-circle" (click)="onNoClick()"></i>
+  <div mat-dialog-content class="confirmation" >
+      <h1>{{data.type}}</h1>
+      <p></p>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button mat-dialog-close class="mat-focus-indicator mat-raised-button mat-button-base mat-primary final_submit_btn" (click)="confirm(data.id)">{{data.first_btn}}</button>
+      <button *ngIf="data.second_btn !='No' " mat-raised-button mat-dialog-close class="mat-focus-indicator mat-raised-button mat-button-base mat-primary discard_btn"(click)="onNoClick()">{{data.second_btn}}</button>
+    </div>
+</div>

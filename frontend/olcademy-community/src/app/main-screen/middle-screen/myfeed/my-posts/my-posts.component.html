@@ -1,0 +1,66 @@
+<div class="blogs-container">
+    <div class="filter">
+        <div>
+            <hr>
+        </div>
+        <div class="sort-by">
+            Sort by: Popularity
+        </div>
+    </div>
+    <div *ngFor="let blog of blogList; let i=index">
+        <mat-card class="thread-topic-card">
+            <div class="thread-card">
+                <div class="profile-picture">
+                    <img [src]= author_image_path[i]>
+                </div>
+                <div class="thread-details">
+                    <div class="thread-title">
+                        <span (click)=go_to_blog(blog._id)>
+                            {{blog.post_title}} 
+                        </span>
+                        <button><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+        
+                    <div class="thread-author">
+                        {{blog_life(blog.published_on)}} | By {{blog.author_name}}
+                    </div>
+        
+                    <div class="thread-desc">
+                        <!-- <input type="checkbox" id="expanded"> -->
+                        <div  [innerHTML]="blog.post_content"></div>
+                        <!-- <label for="expanded" role="button">more</label> -->
+                    </div>
+                    <div class="thread-tags">
+                        <div class="tag">   #{{ blog.category }}   </div>
+                        <div *ngFor="let tag of blog.hashtags">
+                            <div class="tag"> #{{tag}} </div> 
+                        </div>
+                    </div>
+        
+                    <div class="section">
+                        <div>
+                            <i class="fas fa-thumbs-up"></i> {{blog.kudos}}  Kudos
+                        </div>
+                        <div>
+                            <i class="fas fa-comment"></i> {{blog.comments}}  Comment
+                        </div>
+                        <div>
+                            <i class="fas fa-share-alt"></i>  Share
+                        </div>
+                        <div>
+                            <i class="fas fa-bookmark"></i>  Bookmark
+                        </div>
+                        <div>
+                            <i class="fas fa-eye"></i> {{blog.num_of_views}} Views
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    <div *ngIf="blogList.length === 0">
+        <div>
+            "No bookmarked posts"
+        </div>
+    </div>
+    </div>

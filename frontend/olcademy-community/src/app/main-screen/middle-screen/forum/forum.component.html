@@ -1,0 +1,120 @@
+<div class="forum-container">
+    <mat-card class="forum-header" >
+        <div class="forumImage">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaSdQzkp1BLBPpd1tMQJAqFVObwLU2Ke69Iw&usqp=CAU" alt="">
+        </div>
+        <div class="forumHeading" >
+            <h3>Trending Forums</h3>
+        </div>
+    </mat-card>
+    <mat-card class="ask-question-card">
+        <!-- Connect with the Community for answers to your queries<br>
+        <button style="margin-top: 8px;">Ask Question</button> -->
+        <form (ngSubmit)="onSubmit()" autocomplete="off" spellcheck="false" #f="ngForm">
+            <input class="topicName" ngModel name="topicName" type="text" (onChange)="onChange()" required placeholder="Topic Name" #topicName>
+            <!-- <input type="text" ngModel name="question" role="textbox" contenteditable="true" aria-required="true" aria-multiline="true" required placeholder="Ask Your Question" #question> -->
+            <!-- <div class="input" ngModel name="question" role="textbox" contenteditable="true" aria-required="true" aria-multiline="true" required placeholder="Ask Your Question" #question></div> -->
+            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" placeholder="Ask Your Question" ngModel name="question" required #question></textarea>
+            <!-- <div (click)="getData()" >get image</div>
+            <img [src]="imageAddress" alt=""> -->
+
+            <div class="tagArea">
+                <span class="tags" *ngFor="let tag of tags">{{tag}}</span>
+            </div>
+        
+            <div class="ask-question-attributes">
+                <span>Add:</span> 
+                <ul class="add-attributes">
+                    <li (click)="openUploadImage()" >Image</li>
+                    <li>Video</li>
+                    <li>Document</li>
+                </ul>
+
+                <span class="add-tags">
+                    <input type="text" class="add-tag-input" #tagName placeholder="Add Tag">
+                    <div class="add-tag" (click)="addTag()">Add</div>
+                </span>
+                <div class="add-category">
+                    <span class="category-label">Categories:</span>
+                    <a href="#">Select <i class="fas fa-caret-down"></i></a>
+                </div>
+            </div>
+            <button class="ask-question-submit" [disabled]="onBtnCLick()">Post</button>
+        </form>
+    </mat-card>
+
+    <br>
+
+    <div class="filter">
+        <div>
+            <hr>
+        </div>
+        <div class="sort-by">
+            Sort by: <span  (click)="showSortByDropdown()" >Popularity <i class="fas fa-caret-down"></i></span>
+            <br>
+            <ul class="sort-by-dropdown" *ngIf="isSortByDropdownHidden()" >
+                <li>Popularity</li>
+                <li>Latest</li>
+            </ul>
+        </div>
+    </div>
+    <mat-card class="example-card" *ngFor="let forum of forumsList">
+        <i class="fas fa-ellipsis-v" (click)="onShowMenu()"></i>
+        <ul class="menu-list"  *ngIf="isHidden()">
+            <li>Turn on/off Notification</li>
+            <li>Unfollow User</li>
+            <li (click)="openReportPopup()" >Report</li>
+        </ul>
+        <mat-card-header>
+            <div mat-card-avatar class="user-image">
+                <img src="./../../../assets/icons/8. User Name.png" alt="">
+            </div>
+            <mat-card-title (click)="showPost(forum.postId)" class="post-title" >{{forum.postTitle}}</mat-card-title>
+            <mat-card-subtitle class="post-details" >{{forum.date}} | BY <span class="username" routerLink="/user-page">{{forum.postAuthor}}</span></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="card-content" >
+            <div class="thread-desc">
+                <!-- <input type="checkbox" id="expanded"> -->
+                <p>{{forum.postDescription.substring(0, 250)}}...</p>
+                <!-- <label for="expanded" role="button">more</label> -->
+            </div>
+            <mat-grid-list cols="2">
+                <mat-grid-tile  class="ivd" *ngFor="let img of forum.imgs; let i=index">
+                    <img src={{img}} alt="">
+                </mat-grid-tile>
+                <mat-grid-tile  class="ivd">
+                    <div>
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile  class="ivd" *ngIf="forum.imgs.length > 4">
+                    <div>
+                        <span>+{{forum.imgs.length - 3}}</span>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+            <div class="thread-tags">
+                <div class="tag" *ngFor="let tag of forum.tags"># {{tag}}</div>
+            </div>
+
+            <div class="section">
+                <div>
+                    <i class="fas fa-thumbs-up"></i> 222 Kudos
+                </div>
+                <div>
+                    <i class="fas fa-comment"></i> 22 Comment
+                </div>
+                <div>
+                    <i class="fas fa-share-alt"></i> Share
+                </div>
+                <div>
+                    <i class="fas fa-bookmark"></i> Bookmark
+                </div>
+                <div>
+                    <i class="fas fa-eye"></i> 1222 Views
+                </div>
+            </div>
+        </mat-card-content>
+      </mat-card>      
+</div>

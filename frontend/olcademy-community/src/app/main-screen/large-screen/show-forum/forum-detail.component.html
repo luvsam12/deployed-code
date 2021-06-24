@@ -1,0 +1,166 @@
+
+<header>
+    <app-header></app-header>
+</header>
+<!-- <i class="far fa-arrow-alt-circle-left"></i> -->
+<div id="show-blog">
+    <app-right-screen></app-right-screen>
+    <div class="container" style="display: flex;flex-direction: row;">
+        <i class="far fa-arrow-alt-circle-left" (click)="goBack()" ></i>
+        <mat-card class="example-card">
+            <mat-card-header class="card-header" >
+                <div mat-card-avatar class="example-header-image">
+                    <img routerLink="/user-page" src="https://image.freepik.com/free-vector/businessman-avatar-cartoon-character-profile_18591-50141.jpg" alt="">
+                </div>
+              <mat-card-title class="post-title" >{{post.postTitle}}</mat-card-title>
+              <mat-card-subtitle class="post-details" >{{post.date}}   |   By <span routerLink="/user-page" >{{post.postAuthor}}</span></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content  class="card-content">
+                <div class="post-desc">
+                  <p>{{post.postDescription}}</p>
+                </div>
+                <mat-grid-list cols="2">
+                    <mat-grid-tile  class="ivd" *ngFor="let img of post.imgs">
+                        <img src={{img}} alt="">
+                    </mat-grid-tile>
+                    <mat-grid-tile  class="ivd">
+                        <div>
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+                <div class="thread-tags">
+                    <div class="tag" *ngFor="let tag of post.tags">
+                        #{{tag}}
+                        <i class="far fa-times-circle" ></i>
+                    </div>
+                </div>
+                <ul class="shareOptions" *ngIf="showShareOptions()" >
+                    <li (click)="openSharePopup()" >Share link on other websites</li>
+                    <li (click)="openShareOnFeedPopup(post.postId)" >Share post on your feed</li>
+                </ul>
+                <div class="section">
+                    <div>
+                        <i class="fas fa-thumbs-up"></i> 222 Kudos
+                    </div>
+                    <div>
+                        <i class="fas fa-comment"></i> 22 Comment
+                    </div>
+                    <div (click)="shareThread()">
+                        <i class="fas fa-share-alt"></i> Share
+                    </div>
+                    <div>
+                        <i class="fas fa-bookmark"></i> Bookmark
+                    </div>
+                    <div>
+                        <i class="fas fa-eye"></i> 1222 Views
+                    </div>
+                </div>
+            </mat-card-content>
+            <div class="answer-button">
+                <button class="ansBtn" (click)="toShowComment()" >Answer</button>
+            </div>
+            <div class="answer" *ngIf="isAnswerPanelHidden()" >
+                <img class="user-image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="">
+                <!-- <input class="answer-input" type="text" placeholder="Type Your Answer"> -->
+                <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" class="answer-input" placeholder="Type Your Answer" spellcheck="false"></textarea>
+                <i class="fas fa-link"></i>
+                <button class="postBtn">Post</button>
+            </div>
+
+            <div class="comment-section" *ngFor="let num of nums">
+                <div class="left-part" ><i class="fas fa-thumbs-up"></i>223</div>
+                <div class="right-part" >
+                    <!-- original comment -->
+                    <div class="comments">
+                        <div class="profile-pic">
+                            <!-- <img src="./../../../assets/icons/8. User Name.png" routerLink="/user-page"> -->
+                            <!-- <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" routerLink="/user-page"> -->
+                            <img src="https://www.kindpng.com/picc/m/78-785975_icon-profile-bio-avatar-person-symbol-chat-icon.png" routerLink="/user-page">
+                        </div>
+                        <div class="comment">
+                            Ankit Biswal | Learner 
+                            <!-- <span class="comment-time"><em>Time</em></span> -->
+                            <br>
+                            <div class="comment-content">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptates dicta temporibus nam eius iste vero debitis possimus voluptas consectetur!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-attributes">
+                        <span>
+                            <i class="fas fa-thumbs-up"></i>
+                            <i class="fas fa-comment-alt"></i>
+                        </span>
+                        <span>
+                            <i class="fas fa-exclamation" (click)="reportSpam()"></i>
+                        </span>
+                    </div>
+
+                    <!-- if there is a reply to the parent comment then this section is shown -->
+
+                    <!-- Reply comment starts -->
+                    <div class="reply-comment-section">
+                        <div class="parent-comment">
+                            <div class="empty"></div>
+                            <div class="comments">
+                                <div class="profile-pic">
+                                    <!-- <img src="./../../../assets/icons/8. User Name.png" routerLink="/user-page"> -->
+                                    <!-- <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" routerLink="/user-page"> -->
+                                    <img src="https://www.kindpng.com/picc/m/78-785975_icon-profile-bio-avatar-person-symbol-chat-icon.png" routerLink="/user-page">
+                                </div>
+                                <div class="comment">
+                                    Ankit Biswal | Learner 
+                                    <!-- <span class="comment-time"><em>Time</em></span> -->
+                                    <br>
+                                    <div class="comment-content">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptates dicta temporibus nam eius iste vero debitis possimus voluptas consectetur!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reply-comment">
+                            <div class="comments">
+                                <div class="profile-pic">
+                                    <!-- <img src="./../../../assets/icons/8. User Name.png" routerLink="/user-page"> -->
+                                    <!-- <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" routerLink="/user-page"> -->
+                                    <img src="https://www.kindpng.com/picc/m/78-785975_icon-profile-bio-avatar-person-symbol-chat-icon.png" routerLink="/user-page">
+                                </div>
+                                <div class="comment">
+                                    Ankit Biswal | Learner 
+                                    <!-- <span class="comment-time"><em>Time</em></span> -->
+                                    <br>
+                                    <div class="comment-content">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptates dicta temporibus nam eius iste vero debitis possimus voluptas consectetur!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+        <i class="fas fa-ellipsis-v" (click)="onShowMenu()"></i>
+        <ul class="settings" *ngIf="isHidden()" >
+            <li (click)="editPost()" >Edit Thread</li>
+            <li>Turn off/on Notification</li>
+            <li (click)="deletePost()" >Delete Thread</li>
+        </ul>
+        <div class="backdrop" #backdrop (click)="closeSettings()" ></div>
+    </div>
+
+
+    <br>
+</div>
+<div class="similar-blogs" style="display:flex;flex-direction: row;">
+    
+    <div >
+        Similar Threads:
+        <br>
+        <a routerLink="/blogs">How to Increase Conversion Rates with Effective Squeeze Pages</a><span class="label-a">by Katie Terrel</span>l
+        <br>
+        <a routerLink="/blogs">Top 5 ways to get Inbound Links </a><span class="label-a">by Andre Youkhna</span>l
+    </div>
+</div>
+

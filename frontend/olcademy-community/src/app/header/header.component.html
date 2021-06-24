@@ -1,0 +1,105 @@
+<div id="header-grid">
+    <div class="logo_container">
+         <div id="logo-image"  (click)="home()">
+         </div>
+    </div>
+    <div style="width: 3.44%;">
+        <button class="option"><i class="fas fa-bars" id="option-icon"></i></button>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search" (keyup)="enterKey($event)">
+        <button type="submit" class="search-btn"><i class="fas fa-search search_icon"></i></button>
+    </div>
+    <div class="tabs">
+        <div class="tab" (click)="navigate('courses')" id="courses">
+            <div id="courses-icon">
+            </div>
+            <div class="tab-label">
+                Courses
+            </div>
+        </div>
+
+        <div class="tab" (click)="navigate('myfeed')" id="myfeed" *ngIf="(login)">
+            <div id="myfeed-icon">
+            </div>
+            <div class="tab-label">
+                My Feed
+            </div>
+        </div>
+
+        <div class="tab" (click)="navigate('forum')" id="forum">
+            <div id="forum-icon">
+            </div>
+            <div class="tab-label">
+                Forum
+            </div>
+        </div>
+
+        <div class="tab" (click)="navigate('blogs')" id="blogs">
+            <div id="blogs-icon">
+            </div>
+            <div class="tab-label">
+                Blogs
+            </div>
+        </div>
+
+        <div class="tab" (click)="navigate('network')" id="network" *ngIf="(login)">
+            <div id="network-icon">
+            </div>
+            <div class="tab-label">
+                Network
+            </div>
+        </div>
+
+        <div class="tab" (click)="navigate('tests')" id="tests">
+            <div id="assessment-icon">
+            </div>
+            <div class="tab-label">
+                Tests
+            </div>
+        </div>
+
+    </div>
+    <div *ngIf="!(login)" style="width: 5.89%;"></div>
+    <div class="signup-login" *ngIf="!(login)">
+        <div class="sign-up" (click)="go_to_signup()">
+            <button  id="signup">Sign Up</button>
+            &nbsp;&nbsp;
+        </div>
+        <div class="login" (click)="go_to_login()">
+                <button id="login">Log In</button>
+
+        </div>
+    </div>
+    <div style="width: 8.89%;" *ngIf="(login)"></div>
+    <div class="notification-and-user" *ngIf="(login)">
+        <div class="tab" (click)="navigate('notification')" id="notification">
+            <div id="notification-icon">
+            </div>
+            <div class="tab-label">
+                Notification
+            </div>
+        </div>
+
+        <div class="tab">
+          <button mat-icon-button [matMenuTriggerFor]="menu"  class="mat-menu-button">
+            <div id="username-icon">
+                    <img style="border-radius: 100px;zoom: 0.9;" [src]=userimage alt="" >
+            </div>
+
+            <div class="header-user-name">
+                {{user_data.authdata.full_name.split(" ")[0] | titlecase}}
+            </div>
+          </button>
+          <mat-menu #menu="matMenu">
+            <div>
+                <button mat-menu-item  value="{{category}}" *ngFor="let category of categories" (click)="options(category)">
+                    <span>{{category}}</span>
+                </button>
+            </div>
+          </mat-menu>
+
+        </div>
+    </div>
+</div>
+

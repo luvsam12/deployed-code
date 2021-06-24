@@ -1,0 +1,927 @@
+<mat-card id="card"> Assessment </mat-card>
+<p>upload-questions works!</p>
+
+<p>Hi there</p>
+
+<mat-card class="thread-topic-card">
+  <div class="thread-card">
+    <div class="profile-picture"></div>
+    <div class="thread-details">
+      <div class="thread-title">
+        <button>
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+      <span class="dot"></span><span class="subhead"> CAT</span>
+      <div class="thread-desc">
+        <p>
+          Description of thread topic. Description of thread topic. Description
+          of thread topic. Description of thread topic. Description of thread
+          topic. Description of thread topic. Description of thread topic.
+          Description of thread topic. Description of thread topic. Description
+          of thread topic. Description of thread topic. Description of thread
+          topic. Description of thread topic. Description of thread topic.
+          Description of thread topic. Description of thread topic.
+        </p>
+      </div>
+      <div style="font-size: 11px">
+        <span class="material-icons" style="height: 4px; width: 8px">link</span>
+        <span style="margin-left: 18px; vertical-align: top; margin-top: 2px"
+          ><a href="wwww.example.com">wwww.example.com</a></span
+        >
+        <span class="dot1" style="margin-left: 35px"></span>
+        <span style="vertical-align: top; text-indent: 5em">
+          &emsp;Updated on 21 Dec, 2020</span
+        >
+      </div>
+      <div class="thread-tags">
+        <div class="tag"># Tag1</div>
+        <div class="tag"># Tag1</div>
+      </div>
+      <div class="thread-author">HH:MM IST | By Author Name</div>
+    </div>
+  </div>
+</mat-card>
+
+<!-- 
+        <div class="filters">
+            <div class="filter" (click)="toggleMoreFilters()" >
+                <p class="filter-para" ><mat-icon class="filter-icon" >local_bar</mat-icon>Filter</p>
+                <mat-icon *ngIf="showMoreFilters === false" >keyboard_arrow_down</mat-icon>
+                <mat-icon class="blue-highlight" *ngIf="showMoreFilters === true" >keyboard_arrow_up</mat-icon>
+            </div>
+            <div class="right-side-filters">
+                <div class="sort-by"><mat-icon class="sort-icon" >sort</mat-icon>Sort By</div>
+                <div class="latest">
+                    <p class="filter-para" ><mat-icon class="filter-icon" >local_bar</mat-icon>Latest</p>
+                    <mat-icon mat-button [matMenuTriggerFor]="beforeMenu">keyboard_arrow_down</mat-icon>
+                    <mat-menu #beforeMenu="matMenu" xPosition="before">
+                      <button mat-menu-item>Item 1</button>
+                      <button mat-menu-item>Item 2</button>
+                    </mat-menu>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <div class="more-filters" *ngIf="shouldShowMoreFilters()" >
+            <div class="left-side">
+                <div class="each-filter" *ngFor="let eachFilter of moreFilter" >
+                    <span>{{eachFilter}}</span>
+                    <mat-icon >keyboard_arrow_down</mat-icon>
+                </div>
+            </div>
+            <div class="right-side">
+                <button class="btn" >CLear</button>
+            </div>
+        </div>
+
+   <div>-->
+
+<!--
+<div class="defaultmyfeed-filter">
+  <div><hr /></div>
+</div>
+-->
+
+<hr />
+<br />
+<div class="filters1">
+  <div class="right-side-filters1">
+    <div class="" style="margin-left: 10px">Category*</div>
+    <div class="latest1" style="margin-left: 70px">
+      <p class="filter-para">CAT</p>
+      <mat-icon mat-button [matMenuTriggerFor]="beforeMenu"
+        >keyboard_arrow_down</mat-icon
+      >
+      <mat-menu #beforeMenu="matMenu" xPosition="before" style="">
+        <button mat-menu-item style="width: 10vw">Item 1</button>
+        <button mat-menu-item style="width: 10vw">Item 2</button>
+      </mat-menu>
+    </div>
+  </div>
+
+  <div class="right-side-filters1">
+    <div class="" style="margin-left: 44px">Difficulty*</div>
+    <div class="latest1" style="margin-left: 70px">
+      <p class="filter-para">Expert</p>
+      <mat-icon mat-button [matMenuTriggerFor]="beforeMenu"
+        >keyboard_arrow_down</mat-icon
+      >
+      <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item style="width: 10vw">Item 1</button>
+        <button mat-menu-item style="width: 10vw">Item 2</button>
+      </mat-menu>
+    </div>
+  </div>
+</div>
+
+<div class="filters2">
+  <div class="right-side-filters2">
+    <div class="" style="margin-left: 10px">Section</div>
+    <div class="latest2" style="margin-left: 87px">
+      <p class="filter-para">Quantitative Availability</p>
+      <mat-icon mat-button [matMenuTriggerFor]="beforeMenu"
+        >keyboard_arrow_down</mat-icon
+      >
+      <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item style="width: 20vw">Item 1</button>
+        <button mat-menu-item style="width: 20vw">Item 2</button>
+      </mat-menu>
+    </div>
+  </div>
+</div>
+<br />
+<hr />
+<br />
+
+<div style="display: flex; flex-direction: row">
+  <span style="margin-left: 10px">Add media file</span>
+  <span style="margin-left: 40px" class="material-icons">add_circle</span>
+  <span style="margin-left: 30px" class="material-icons">image</span>
+  <span style="vertical-align: middle">CAT.jpg</span>
+  <span style="margin-left: 30px">0.6Mb</span>
+  <span style="margin-left: 25px" class="material-icons">check_circle</span>
+  <span style="margin-left: 42%" class="material-icons">delete</span>
+</div>
+
+<br />
+<hr />
+<br />
+<div style="display: flex; flex-direction: row">
+  <span style="margin-left: 10px">Is this a *</span>
+  <input
+    type="radio"
+    id="single"
+    name="option"
+    value="single"
+    style="margin-left: 70px"
+  />
+  <label for="single">Single Question</label><br />
+  <input
+    type="radio"
+    id="series"
+    name="option"
+    value="series"
+    style="margin-left: 50px"
+  />
+  <label for="series">Series</label><br />
+</div>
+<br />
+<div style="display: flex; flex-direction: row">
+  <span style="margin-left: 10px">Series Information *</span>
+  <textarea
+    id="Seriesinfo"
+    name="Seriesinfo"
+    rows="5"
+    cols="50"
+    style="margin-left: 200px"
+  >
+  At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+  </textarea>
+</div>
+<br />
+
+<mat-card
+  class="thread-topic-card"
+  style="margin-left: 10px; margin-right: 10px"
+>
+  <div style="display: flex; flex-direction: row">
+    <input
+      type="text"
+      id="question_tb"
+      name="question_tb"
+      placeholder="Untitled Question"
+      style="width: 60%"
+    />
+    <!--<input type="text" id="question_tb" name="question_tb" placeholder="Untitled Question" style="width:35%">-->
+
+    <div class="right-side-filters2" style="width: 40%">
+      <div class="latest2" style="margin-left: 20px; margin-right: -100px">
+        <p class="filter-para" style="">MCQ</p>
+        <mat-icon mat-button [matMenuTriggerFor]="beforeMenu"
+          >keyboard_arrow_down</mat-icon
+        >
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <button mat-menu-item style="width: 20vw">Item 1</button>
+          <button mat-menu-item style="width: 20vw">Item 2</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div>
+    <div style="display: flex; flex-direction: row">
+      <input type="radio" id="single" name="ques1" value="single" />
+      <label for="ques1">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">clear</span>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="radio" id="single" name="ques1" value="single" />
+      <label for="ques1">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">clear</span>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="radio" id="single" name="ques1" value="single" />
+      <label for="ques1">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">clear</span>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="radio" id="single" name="ques1" value="single" />
+      <input
+        type="text"
+        id="question_tb"
+        name="ques1"
+        placeholder="Add Question"
+        style="
+          color: grey;
+          padding: 0px 0px 7px 0px;
+          border-bottom: 1px solid black;
+          border-right: 0px solid black;
+          width: 20%;
+        "
+      /><br />
+      <!--<span class="material-icons" style="margin-left: 78%">clear</span>-->
+    </div>
+    <br />
+    <div style="display: flex; flex-direction: row">
+      <span class="material-icons">check</span>
+      Mark correct response(s)
+    </div>
+
+    <hr />
+
+    <div style="display: flex; flex-direction: row; margin-bottom: -5px">
+      <br />
+      <span style="margin-left: 10px">Add media file</span>
+      <span
+        class="material-icons"
+        style="margin-left: 10px; font-size: 30px; margin-top: -3px"
+        >add_circle</span
+      >
+      <span
+        style="
+          margin-left: 30%;
+          padding: 0px 20px 0px 0px;
+          border-right: 1px solid black;
+        "
+        class="material-icons"
+        >delete</span
+      >
+      <span style="margin-left: 10px">Allow multiple selections</span>
+      <span
+        class="material-icons"
+        style="font-size: 40px; margin-top: -8px; margin-left: 65px"
+      >
+        toggle_off
+      </span>
+    </div>
+  </div>
+</mat-card>
+
+<div style="display: flex; flex-direction: row">
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 30px; width: 160px"
+    >
+      Add Questions
+    </button>
+  </div>
+
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 180px; width: 160px"
+    >
+      Save
+    </button>
+  </div>
+
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 30px; width: 160px"
+    >
+      Upload
+    </button>
+  </div>
+</div>
+
+<hr />
+
+<br />
+
+<mat-card
+  class="thread-topic-card"
+  style="margin-left: 20px; margin-right: 20px"
+>
+  <span style="" class="material-icons">check</span>
+  <span style="font-size: 19px; vertical-align: top"
+    >&nbsp; Choose correct answers:</span
+  >
+  <hr />
+  <br />
+  <div>
+    <div style="display: flex; flex-direction: row">
+      <input type="radio" id="single" name="fin_single_1" value="single" />
+      <label for="fin_single_1">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">check</span>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="radio" id="single" name="fin_single_1" value="single" />
+      <label for="fin_single_1">Single Question</label><br />
+      <!--<span class="material-icons" style="margin-left: 77.5%">clear</span>-->
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="radio" id="single" name="fin_single_1" value="single" />
+      <label for="fin_single_1">Single Question</label><br />
+      <!--<span class="material-icons" style="margin-left: 77.5%">clear</span>-->
+    </div>
+
+
+    <!--<span class="material-icons" style="margin-left: 78%">clear</span>-->
+  </div>
+
+  <hr />
+
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 520px; width: 160px"
+    >
+      Done
+    </button>
+  </div>
+</mat-card>
+
+
+<mat-card
+  class="thread-topic-card"
+  style="margin-left: 20px; margin-right: 20px"
+>
+  <div style="display: flex; flex-direction: row">
+    <input
+      type="text"
+      id="question_tb"
+      name="question_tb"
+      placeholder="Untitled Question"
+      style="width: 60%"
+    />
+    <!--<input type="text" id="question_tb" name="question_tb" placeholder="Untitled Question" style="width:35%">-->
+
+    <div class="right-side-filters2" style="width: 40%">
+      <div class="latest2" style="margin-left: 20px; margin-right: -100px">
+        <p class="filter-para" style="">MCQ</p>
+        <mat-icon mat-button [matMenuTriggerFor]="beforeMenu"
+          >keyboard_arrow_down</mat-icon
+        >
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <button mat-menu-item style="width: 20vw">Item 1</button>
+          <button mat-menu-item style="width: 20vw">Item 2</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div>
+    <div style="display: flex; flex-direction: row">
+      <input type="radio" id="single" name="ques1" value="single" />
+      <label for="ques1">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">check</span>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="radio" id="single" name="ques1" value="single" />
+      <label for="ques1">Single Question</label><br />
+      <!--<span class="material-icons" style="margin-left: 77.5%">clear</span>-->
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="radio" id="single" name="ques1" value="single" />
+      <label for="ques1">Single Question</label><br />
+      <!--<span class="material-icons" style="margin-left: 77.5%">clear</span>-->
+    </div>
+
+    <br />
+    <div style="display: flex; flex-direction: row">
+      <span class="material-icons">check</span>
+      Mark correct response(s)
+    </div>
+
+    <hr />
+
+    <div style="display: flex; flex-direction: row; margin-bottom: -5px">
+      <br />
+      <span style="margin-left: 10px">Add media file</span>
+      <span
+        class="material-icons"
+        style="margin-left: 10px; font-size: 30px; margin-top: -3px"
+        >add_circle</span
+      >
+      <span
+        style="
+          margin-left: 30%;
+          padding: 0px 20px 0px 0px;
+          border-right: 1px solid black;
+        "
+        class="material-icons"
+        >delete</span
+      >
+      <span style="margin-left: 10px">Allow multiple selections</span>
+      <span
+        class="material-icons"
+        style="font-size: 40px; margin-top: -8px; margin-left: 65px"
+      >
+        toggle_off
+      </span>
+    </div>
+  </div>
+</mat-card>
+
+<div style="display: flex; flex-direction: row">
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 30px; width: 160px"
+    >
+      Add Questions
+    </button>
+  </div>
+
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 180px; width: 160px"
+    >
+      Save
+    </button>
+  </div>
+
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 30px; width: 160px"
+    >
+      Upload
+    </button>
+  </div>
+</div>
+
+<hr />
+
+
+
+
+
+
+<br />
+<br />
+<br />
+
+<mat-card
+  class="thread-topic-card"
+  style="margin-left: 20px; margin-right: 20px"
+>
+  <div style="display: flex; flex-direction: row">
+    <input
+      type="text"
+      id="question_tb"
+      name="question_tb"
+      placeholder="Untitled Question"
+      style="width: 60%"
+    />
+    <!--<input type="text" id="question_tb" name="question_tb" placeholder="Untitled Question" style="width:35%">-->
+
+    <div class="right-side-filters2" style="width: 40%">
+      <div class="latest2" style="margin-left: 20px; margin-right: -100px">
+        <p class="filter-para" style="">MCQ</p>
+        <mat-icon mat-button [matMenuTriggerFor]="beforeMenu"
+          >keyboard_arrow_down</mat-icon
+        >
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <button mat-menu-item style="width: 20vw">Item 1</button>
+          <button mat-menu-item style="width: 20vw">Item 2</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div>
+    <div style="display: flex; flex-direction: row">
+      <input type="checkbox" id="multi" name="ques2" value="multi" />
+      <label for="ques2">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">clear</span>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="checkbox" id="multi" name="ques2" value="multi" />
+      <label for="ques2">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">clear</span>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="checkbox" id="multi" name="ques2" value="multi" />
+      <label for="ques2">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">clear</span>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="checkbox" id="multi" name="ques2" value="multi" />
+      <input
+        type="text"
+        id="question_tb"
+        name="question_tb"
+        placeholder="Add Question"
+        style="
+          color: grey;
+          padding: 0px 0px 7px 0px;
+          border-bottom: 1px solid black;
+          border-right: 0px solid black;
+          width: 20%;
+        "
+      />
+      <br />
+      <!--<span class="material-icons" style="margin-left: 78%">clear</span>-->
+    </div>
+    <br />
+    <div style="display: flex; flex-direction: row">
+      <span class="material-icons">check</span>
+      Mark correct response(s)
+    </div>
+
+    <hr />
+
+    <div style="display: flex; flex-direction: row; margin-bottom: -5px">
+      <br />
+      <span style="margin-left: 10px">Add media file</span>
+      <span
+        class="material-icons"
+        style="margin-left: 10px; font-size: 30px; margin-top: -3px"
+        >add_circle</span
+      >
+      <span
+        style="
+          margin-left: 30%;
+          padding: 0px 20px 0px 0px;
+          border-right: 1px solid black;
+        "
+        class="material-icons"
+        >delete</span
+      >
+      <span style="margin-left: 10px">Allow multiple selections</span>
+      <span
+        class="material-icons"
+        style="font-size: 40px; margin-top: -8px; margin-left: 65px"
+      >
+        toggle_on
+      </span>
+    </div>
+  </div>
+</mat-card>
+
+<div style="display: flex; flex-direction: row">
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 30px; width: 160px"
+    >
+      Add Questions
+    </button>
+  </div>
+
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 180px; width: 160px"
+    >
+      Save
+    </button>
+  </div>
+
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 30px; width: 160px"
+    >
+      Upload
+    </button>
+  </div>
+</div>
+
+<hr />
+
+<br />
+
+<mat-card
+  class="thread-topic-card"
+  style="margin-left: 20px; margin-right: 20px"
+>
+  <span style="" class="material-icons">check</span>
+  <span style="font-size: 19px; vertical-align: top"
+    >&nbsp; Choose correct answers:</span
+  >
+  <hr />
+  <br />
+  <div>
+    <div style="display: flex; flex-direction: row">
+      <input type="checkbox" id="single" name="fin_multi_1" value="single" />
+      <label for="fin_multi_1">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">clear</span>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="checkbox" id="single" name="fin_multi_1" value="single" />
+      <label for="fin_multi_1">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">clear</span>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="checkbox" id="single" name="fin_multi_1" value="single" />
+      <label for="fin_multi_1">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">clear</span>
+    </div>
+
+    <div style="display: flex; flex-direction: row; margin-top: 10px">
+      <input type="checkbox" id="single" name="fin_multi_1" value="single" />
+      <label for="fin_multi_1">Single Question</label><br />
+      <span class="material-icons" style="margin-left: 77.5%">clear</span>
+    </div>
+    <!--<span class="material-icons" style="margin-left: 78%">clear</span>-->
+  </div>
+
+  <hr />
+
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 520px; width: 160px"
+    >
+      Done
+    </button>
+  </div>
+</mat-card>
+
+<br />
+<br />
+<br />
+
+<mat-card
+  class="thread-topic-card"
+  style="margin-left: 20px; margin-right: 20px"
+>
+  <div style="display: flex; flex-direction: row">
+    <input
+      type="text"
+      id="question_tb"
+      name="question_tb"
+      placeholder="Untitled Question"
+      style="width: 60%"
+    />
+    <!--<input type="text" id="question_tb" name="question_tb" placeholder="Untitled Question" style="width:35%">-->
+
+    <div class="right-side-filters2" style="width: 40%">
+      <div class="latest2" style="margin-left: 20px; margin-right: -100px">
+        <p class="filter-para" style="">Text Response</p>
+        <mat-icon mat-button [matMenuTriggerFor]="beforeMenu"
+          >keyboard_arrow_down</mat-icon
+        >
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <button mat-menu-item style="width: 20vw">Item 1</button>
+          <button mat-menu-item style="width: 20vw">Item 2</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+
+  <input
+    type="text"
+    name="text_reply"
+    placeholder="Text Response"
+    style="
+      color: grey;
+      padding: 0px 0px 7px 0px;
+      border-bottom: 1px solid black;
+      border-right: 0px solid black;
+      width: 20%;
+    "
+  />
+  <br />
+
+  <br />
+  <div style="display: flex; flex-direction: row">
+    <span class="material-icons">check</span>
+    List correct response
+  </div>
+
+  <hr />
+
+  <div style="display: flex; flex-direction: row; margin-bottom: -5px">
+    <br />
+    <span style="margin-left: 10px">Add media file</span>
+    <span
+      class="material-icons"
+      style="margin-left: 10px; font-size: 30px; margin-top: -3px"
+      >add_circle</span
+    >
+    <span style="margin-left: 70%" class="material-icons">delete</span>
+  </div>
+</mat-card>
+
+<div style="display: flex; flex-direction: row">
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 30px; width: 160px"
+    >
+      Add Questions
+    </button>
+  </div>
+
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 180px; width: 160px"
+    >
+      Save
+    </button>
+  </div>
+
+  <div class="ques" style="margin-top: 10px">
+    <button
+      class="ques_button"
+      routerLink=""
+      style="margin-left: 30px; width: 160px"
+    >
+      Upload
+    </button>
+  </div>
+</div>
+
+<hr />
+
+<br />
+
+<br />
+
+<mat-card
+  class="thread-topic-card"
+  style="margin-left: 20px; margin-right: 20px"
+>
+  <div style="display: flex; flex-direction: row">
+    <input
+      type="text"
+      id="question_tb"
+      name="question_tb"
+      placeholder="Untitled Question"
+      style="width: 60%"
+    />
+    <!--<input type="text" id="question_tb" name="question_tb" placeholder="Untitled Question" style="width:35%">-->
+
+    <div class="right-side-filters2" style="width: 40%">
+      <div class="latest2" style="margin-left: 20px; margin-right: -100px">
+        <p class="filter-para" style="">Text Response</p>
+        <mat-icon mat-button [matMenuTriggerFor]="beforeMenu"
+          >keyboard_arrow_down</mat-icon
+        >
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <button mat-menu-item style="width: 20vw">Item 1</button>
+          <button mat-menu-item style="width: 20vw">Item 2</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+
+  <input
+    type="text"
+    name="text_reply"
+    placeholder="Text Response"
+    style="
+      color: grey;
+      padding: 0px 0px 7px 0px;
+      border-bottom: 1px solid black;
+      border-right: 0px solid black;
+      width: 20%;
+    "
+  />
+  <br />
+
+  <br />
+  <span>Correct responses:</span><span> Hello World</span>
+  <br />
+  <br />
+  <div style="display: flex; flex-direction: row">
+    <span class="material-icons">check</span>
+    List correct response
+  </div>
+
+  <hr />
+  <!--
+  <div style="display: flex; flex-direction: row">
+    <div class="ques" style="margin-top: 10px">
+      <button
+        class="ques_button"
+        routerLink=""
+        style="margin-left: 510px; width: 160px"
+      >
+        Done
+      </button>
+    </div>
+  </div>
+  --><br />
+  <div style="display: flex; flex-direction: row; margin-bottom: -5px">
+    <br />
+    <span style="margin-left: 10px">Add media file</span>
+    <span
+      class="material-icons"
+      style="margin-left: 10px; font-size: 30px; margin-top: -3px"
+      >add_circle</span
+    >
+    <span style="margin-left: 70%" class="material-icons">delete</span>
+  </div>
+</mat-card>
+
+<br />
+<br />
+
+<mat-card
+  class="thread-topic-card"
+  style="margin-left: 20px; margin-right: 20px"
+>
+  <span style="" class="material-icons">check</span>
+  <span style="font-size: 19px; vertical-align: top"
+    >&nbsp; Choose correct answers:</span
+  >
+  <hr />
+  <br />
+  <div style="display: flex; flex-direction: row">
+    <input
+      type="text"
+      id="question_tb"
+      name="question_tb"
+      placeholder="Untitled Question"
+      style="width: 60%"
+    />
+    <!--<input type="text" id="question_tb" name="question_tb" placeholder="Untitled Question" style="width:35%">-->
+
+  </div>
+  <br />
+  <br />
+
+  <input
+    type="text"
+    name="text_reply"
+    placeholder="Text Response"
+    style="
+      color: grey;
+      padding: 0px 0px 7px 0px;
+      border-bottom: 1px solid black;
+      border-right: 0px solid black;
+      width: 20%;
+    "
+  />
+  <br />
+
+  <br />
+
+
+  <hr />
+
+  <div style="display: flex; flex-direction: row">
+    <div class="ques" style="margin-top: 10px">
+      <button
+        class="ques_button"
+        routerLink=""
+        style="margin-left: 510px; width: 160px"
+      >
+        Done
+      </button>
+    </div>
+  </div>
+</mat-card>
